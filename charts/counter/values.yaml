@@ -1,0 +1,23 @@
+replicas: 1
+image:
+  name: eu.gcr.io/pmoncada-001/keepcoding/flask-counter
+  tag: v1.5.1
+
+resources:
+  requests:
+    memory: 128Mi
+    cpu: 100m
+  limits:
+    memory: 256Mi
+    cpu: 200m
+
+ingress:
+  enabled: true
+  host: example.domain.com
+
+redis:
+  cluster:
+    enabled: false
+  metrics:
+    enabled: true
+  
