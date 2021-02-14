@@ -1,4 +1,4 @@
-# flask-counter
+# counter-flask
 
 ## Descripción de la aplicación.
 Se trata de un contador escrito en python que muestra el numero de llamadas exitosas a la BDD redis y guarda en un JSON los logs de las llamadas exitosas y las fallidas. 
