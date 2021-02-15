@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/code        
+  redis:
+    image: "redis:alpine"
+    command: redis-server --requirepass password
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PASSWORD=password
+      - REDIS_PORT=6379
+    expose:
+      - 6379
+
