@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "kainight",
+  "private_key_id": "7f0c85af2ef466c2c6959490c7e4e152656a2271",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDzTQ0bOIh+KhV0\nGBhry2PQ6GrgKmNRFjU6WYiRnqHhEqS3fcF6N/QbPjmu1HHoA8blkEJB3Azr90x5\ntrFxjQ+T5hCSlTZx9MqYOq8uoi9zZ+UGFFRZ3rbwK6gbZhTQ8/z5If4bsoS4NXR+\nhRRKAvNEmQNN8Lgc3we9Li8HGLaUR1+AhIKY2too8ZKs4jwzNTsIYwPyjgpqTROn\n0LY5FTEeP0zsyiHEALUO30ijbTOn/6nJy0HSrCubcPLYZNl8qNJ5Ka7WxASqfHKz\nYYltAMPgBgWt4yRHlShm1PvkBYBvsdlIB7F+suWfCEJpnxnD/hBQsE8tnGabNIPf\n1newMgY7AgMBAAECggEAX8jA1SufiNP2mDr4Ok/bXx5xHQlzCjRNBkjDXFjwcBSP\n5nFK31vx7VvFB9A5e9co0a3Gd/ky2R8F65ECMKsRK+/SLHMz+Q8fR2krGJffSHbp\nkkgkoTDuIoV9bDP3FABKYqaATNUuLPtWfozT3QNmVGZNB70yLqObf14UQ532G09t\nhShrZQa9FGLte0HhyZ8uvTl7KN5pjclRDlqfLskNB57SWnWTb4P0/4T8aMAg7Epv\nXOK5pdUnsMZ8x73U6zHS+0T8a7/tXB8dD854awmPz5WaBuzMxelajKxcUyVMp+tB\nF7bZ70r1Bj38cQvkkvB7Gn2/D8QyM/OPmzv2xDEoKQKBgQD7qT0N6czbo3AHqdz4\nldW3XkGfOWcB5V9LVs6//qs4dneGaQ1RRRn24RTpVcdYVtnE4ZifgG102At70SUH\nr6Uc5014/Nms6J2wvVD7OG/PQKFIiJYlkUy4MluQrMTLg1IOdqxwXxftIFN05dQM\nord+jbrbgYRI8/caKIC9r7oGnQKBgQD3fundd3W4AQGb25ETcB5kWzfDkzRncSU9\nF8UxjusKLlrws1gvgkBI4pI+YmjUQhpCTO+a4lNgX0zsDqKbd5kD5NQ++OYOLK/N\n8qf25fQjae3dtvgBWqvGFJhx+kkDdF4JMsWsHzWkoaRQvn+3ccXovSpwtdrggH8X\neVN23gy8twKBgQC22zJ8oIv0b13gg6EGksB1+yvNSMU60HIcaNfTE3VPkmyooj5F\n9eK2yrcKEATHgFu9PXpLMuLVSoGVltLEMfDT/pEBPx/fDio+GGD2GPzM55YJAQ2w\nAFJxaE214oMfqKx/y+ThxYa6Con5X2FjSPvxHYRPKF15MKM0Q4e/zCZr1QKBgFB2\n35vUKd6f3SEJ+pnCOu9PxMp+AmybGYtKPh9Fot7VgVV+SW5wv2uy1e8YWZKgxx7F\nGqVVbdwIP98DRxSahpIAhIzQqSL0nlery7X2vzAAUYhi4zC1hOFKcuGjiLdpzuTY\nr/Gs1+jlcKGbvbQrdjebwL+SME4LGMbN+DfOK3/zAoGAVf3uy2JTkioKEjM69eyJ\nY+2MtWDC5ffYX3uKEMRV+xr3aYan/dDGv1Mf53FDWwbnO20Jy9myvJ5pUneN+EIL\nUOEkzhikxG1Q90UswylqN6ouQY+y7hEpiS1tByAJ8Lut3KOJsvUEJMnzluzWTMOH\nnpdSoNx9Dt5aUmbLd7qWy2I=\n-----END PRIVATE KEY-----\n",
+  "client_email": "gcr-kainight@kainight.iam.gserviceaccount.com",
+  "client_id": "105475234164506719296",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gcr-kainight%40kainight.iam.gserviceaccount.com"
+}

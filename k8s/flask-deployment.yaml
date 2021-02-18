@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: flask
+  name: flask
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: flask
+  template:
+    metadata:
+      labels:
+        run: flask
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: "/metrics"
+        prometheus.io/port: "8000"
+    spec:
+      containers:
+      - image: eu.gcr.io/kainight/flask:v1.1
+        name: flask
+        livenessProbe:
+          httpGet:
+            path: /health/live
+            port: 5000
+        readinessProbe:
+          httpGet:
+            path: /health/ready
+            port: 5000
+        env:
+          - name: REDIS_HOST
+            valueFrom:
+              configMapKeyRef:
+                name: config
+                key: REDIS_HOST
+          - name: REDIS_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: my-secret
+                key: REDIS_PASSWORD
+        resources:
+          requests:
+            memory: 128Mi
+            cpu: 100m
+          limits:
+            memory: 256Mi
+            cpu: 200m
+        # livenessProbe: {}
+      imagePullSecrets:
+        - name: gcr-secret        
+status: {}
