@@ -11,8 +11,4 @@ spec:
     targetPort: 5000
   selector:
     run: flask
-  type: LoadBalancer  
-#   sessionAffinity: None
-#   type: ClusterIP
-# status:
-#   loadBalancer: {}
+  type: ClusterIP
