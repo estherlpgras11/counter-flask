@@ -4,6 +4,7 @@ metadata:
   labels:
     run: redis
   name: redis
+  namespace: counter-flask
 spec:
   replicas: 1
   selector:
@@ -18,8 +19,13 @@ spec:
       containers:
       - image: redis
         name: redis
-        args: ["--requirepass", "password"]
+        args: ["--requirepass", "$(REDIS_PASSWORD)"]
         env:
+          - name: REDIS_HOST
+            valueFrom:
+              configMapKeyRef:
+                name: config
+                key: REDIS_HOST
           - name: REDIS_PASSWORD
             valueFrom:
               secretKeyRef:
@@ -27,11 +33,11 @@ spec:
                 key: REDIS_PASSWORD
         resources:
           requests:
-            memory: 128Mi
-            cpu: 100m
-          limits:
-            memory: 256Mi
+            memory: 228Mi
             cpu: 200m
+          limits:
+            memory: 356Mi
+            cpu: 300m
         volumeMounts:
         - name: data
           mountPath: /data 
@@ -40,3 +46,4 @@ spec:
           persistentVolumeClaim:
             claimName: redis-pv-claim
 status: {}
+  

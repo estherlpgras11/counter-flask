@@ -1,0 +1,16 @@
+{{- if .Values.ingress.enabled -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: {{ template "app.name" . }}-flask
+spec:
+  rules:
+  - host: {{ .Values.ingress.host }}
+    http:
+      paths:
+      - backend:
+          serviceName: {{ template "app.name" . }}-flask
+          servicePort: 5000
+{{- end }}

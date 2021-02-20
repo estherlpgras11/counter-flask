@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    {{ include "app.metadataLabels" $ | nindent 4 }}
+  name: {{ template "app.name" . }}-flask
+spec:
+  ports:
+  - port: 5000
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    {{ include "app.metadataLabels" $ | nindent 4 }}
+  type: ClusterIP

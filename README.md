@@ -16,4 +16,9 @@ El html " / " hace una petición a la BDD Redis. Si es exitosa, muestra por pant
 
 
 ## Instrucciones para desplegarla en Kubernetess
-Secrets: kubectl create secret generic my-secret --from-literal=REDIS_PASSWORD=password
+1. Create Secret
+kubectl create secret generic credentials --from-literal=REDIS_PASSWORD=$PASSWORD
+$PASSWORD=mypassword
+
+2. Deploy
+kubectl apply -f k8s  

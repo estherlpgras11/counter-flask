@@ -5,7 +5,13 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - .:/code        
+      - .:/code
+    # environment:
+    #   - GOOGLE_APPLICATION_CREDENTIALS=/Users/esther/DevOps/Bootcamp/MODULO4-Docker_k8s/practica_contenedores/flask/key.json  
+    # logging:
+    #   driver: gcplogs 
+    #   options:
+    #     gcp-project: "kainight"               
   redis:
     image: "redis:alpine"
     command: redis-server --requirepass password

@@ -4,6 +4,7 @@ metadata:
   labels:
     run: flask
   name: flask
+  namespace: counter-flask
 spec:
   ports:
   - port: 5000
@@ -12,3 +13,5 @@ spec:
   selector:
     run: flask
   type: ClusterIP
+status:
+  loadBalancer: {}  

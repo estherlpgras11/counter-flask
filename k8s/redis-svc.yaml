@@ -4,6 +4,7 @@ metadata:
   labels:
     run: redis
   name: redis
+  namespace: counter-flask  
 spec:
   ports:
   - port: 6379
@@ -13,5 +14,5 @@ spec:
     run: redis
   sessionAffinity: None
   type: ClusterIP
-# status:
-#   loadBalancer: {}
+status:
+  loadBalancer: {}

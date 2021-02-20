@@ -4,6 +4,7 @@ metadata:
   labels:
     run: flask
   name: flask
+  namespace: counter-flask
 spec:
   replicas: 1
   selector:
@@ -42,11 +43,11 @@ spec:
                 key: REDIS_PASSWORD
         resources:
           requests:
-            memory: 128Mi
-            cpu: 100m
-          limits:
-            memory: 256Mi
+            memory: 356Mi
             cpu: 200m
+          limits:
+            memory: 612Mi
+            cpu: 600m
       imagePullSecrets:
         - name: gcr-secret        
 status: {}

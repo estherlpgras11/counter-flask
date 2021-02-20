@@ -13,7 +13,6 @@ import os
 # Set environment variables
 REDIS_HOST = os.environ['REDIS_HOST']
 REDIS_PASSWORD = os.environ['REDIS_PASSWORD']
-REDIS_PORT =  os.environ['REDIS_PORT']
 
 app = Flask(__name__)
 
@@ -24,7 +23,7 @@ logger = logging.getLogger("flask-counter")
 logger.setLevel(logging.DEBUG)
 logger.addHandler(logging.StreamHandler(sys.stdout))
 
-cache = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PASSWORD)
+cache = redis.Redis(host=REDIS_HOST, port=6379, password=REDIS_PASSWORD)
 
 start_http_server(8000)
 

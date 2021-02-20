@@ -1,0 +1,23 @@
+replicas: 1
+image:
+  name: eu.gcr.io/kainight/flask
+  tag: v1.1
+
+resources:
+  requests:
+    memory: 28Mi
+    cpu: 100m
+  limits:
+    memory: 356Mi
+    cpu: 300m
+
+ingress:
+  enabled: true
+  host: helmkeepcoding-35-187-171-203.nip.io
+
+redis:
+  cluster:
+    enabled: false
+  metrics:
+    enabled: true
+  
