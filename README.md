@@ -9,16 +9,21 @@ El html " / " hace una petición a la BDD Redis. Si es exitosa, muestra por pant
 /health/live 
 /health/ready
 
-## Requisitos para hacerla funcionar. 
-
-
-## Instrucciones para ejecutarla en local 
-
-
+## Instrucciones para ejecutarla en local
+- Sitúate en directorio en el que se encuentra el dockerfile:
+docker build -t [image name]:[tag] .  
+docker-compose up
+- Abre el navegador y accede a la app: 0.0.0.0:5000
+  
 ## Instrucciones para desplegarla en Kubernetess
 1. Create Secret
 kubectl create secret generic credentials --from-literal=REDIS_PASSWORD=$PASSWORD
 $PASSWORD=mypassword
 
-2. Deploy
+3. Deploy en GKE con Kubernetes
+
+- Crea y configura un clúster zonal en GKE: https://console.cloud.google.com/kubernetes/
+- Conectate al cluster usando la terminal: 
+gcloud container clusters get-credentials [nombre del clustter --zone [zone] --project [id proyecto]
+- Implementa los manifests de k8s:
 kubectl apply -f k8s  
