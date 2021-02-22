@@ -20,7 +20,7 @@ spec:
         prometheus.io/port: "8000"
     spec:
       containers:
-      - image: eu.gcr.io/kainight/flask:v1.1
+      - image: eu.gcr.io/kainight/flask:v2
         name: flask
         livenessProbe:
           httpGet:
@@ -43,11 +43,11 @@ spec:
                 key: REDIS_PASSWORD
         resources:
           requests:
-            memory: 356Mi
+            memory: 228Mi
             cpu: 200m
           limits:
-            memory: 612Mi
-            cpu: 600m
-      imagePullSecrets:
-        - name: gcr-secret        
+            memory: 356Mi
+            cpu: 300m
+      # imagePullSecrets:
+      #   - name: gcr-secret        
 status: {}

@@ -7,7 +7,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: keepcoding-35-187-171-203.nip.io
+  - host: keepcoding-34-77-255-230.nip.io
     http:
       paths:
       - backend:

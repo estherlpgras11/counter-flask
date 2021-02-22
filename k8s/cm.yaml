@@ -4,3 +4,4 @@ data:
 kind: ConfigMap
 metadata:
   name: config
+  namespace: counter-flask  

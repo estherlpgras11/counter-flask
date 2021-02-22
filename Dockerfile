@@ -11,6 +11,6 @@ ENV REDIS_HOST=redis
 ENV REDIS_PASSWORD=default
 ENV REDIS_PORT=6379
 RUN pip install -r /code/requirements.txt
-# RUN export GOOGLE_APPLICATION_CREDENTIALS=/Users/esther/DevOps/Bootcamp/MODULO4-Docker_k8s/practica_contenedores/flask/key.json
-COPY . /code
+WORKDIR /code
+COPY . .
 CMD ["flask", "run"]

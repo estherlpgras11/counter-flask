@@ -33,14 +33,14 @@ spec:
                 key: REDIS_PASSWORD
         resources:
           requests:
-            memory: 228Mi
-            cpu: 200m
+            memory: 128Mi
+            cpu: 100m
           limits:
-            memory: 356Mi
-            cpu: 300m
+            memory: 256Mi
+            cpu: 200m
         volumeMounts:
         - name: data
-          mountPath: /data 
+          mountPath: /data
       volumes:
         - name: data
           persistentVolumeClaim:
